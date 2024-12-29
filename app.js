@@ -9,6 +9,9 @@ const app = express();
 // Middleware to parse JSON bodies
 app.use(express.json());
 
+app.get('/',(req,res)=>{
+    res.send('server is running');
+})
 // Routes with a proper base path for each
 app.use('/api/person', PersonRoutes);  // Person-related routes
 app.use('/api/menu', MenuRoutes);      // Menu-related routes
